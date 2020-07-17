@@ -12,9 +12,71 @@
 </head>
 
 <body>
+	<nav class="header-2 px-3 top-header">
+		<div class="wrap-new">
+			<article>
+				<a href="/"><h2>Title</h2></a></article>
+			<aside>
+				<nav class="nav">
+					<div class="nav-bar-h">
+						<p>Menu <span onclick="myFunction()"> ☰</span></p>
+					</div>
+					<ul id="myDIV">
+						<li><a href="#allproducts">ALL PRODUCTS</a>							
+						</li>
+						<li><a href="#classes">CLASSES</a>							
+						</li>
+						<li><a href="#"> LICENSES </a><span class="ar1">↓</span>
+							<ul class="panel">
+								<div class="navmu">
+									<li>
+										<a href="#esic">Esic Registration</a>									
+									</li>
+									<li>
+										<a href="#gst">GST Registrations</a>										
+									</li>
+									<li>
+										<a href="#import">Import Export Code Registration</a>										
+									</li>
+									<li><a href="#msme">MSME Registration</a></li>
+									<li><a href="#pf">Provident Fund Registration</a></li>
+								</div>
+							</ul>
+						</li>
+					</ul>
 
-	<div class="container-fluid">
-		<section>
+				</nav>
+				<script>
+					function myFunction() {
+						var x = document.getElementById('myDIV');
+						if (x.style.display === 'block') {
+							x.style.display = 'none';
+						} else {
+							x.style.display = 'block';
+						}
+					}
+				</script>
+				<script>
+					var acc = document.getElementsByClassName("ar1");
+					var i;
+
+					for (i = 0; i < acc.length; i++) {
+						acc[i].onclick = function () {
+							this.classList.toggle("active");
+							var panel = this.nextElementSibling;
+							if (panel.style.maxHeight) {
+								panel.style.maxHeight = null;
+							} else {
+								panel.style.maxHeight = panel.scrollHeight + "px";
+							}
+						}
+					}
+				</script>
+			</aside>
+		</div>
+	</nav>
+	<div class="container-fluid mt-5 pt-5">
+		<section id="allproducts">
 			<div class="row">
 				<div class="col-sm-12">
 					<h2 class="page-title xs-mbno">DSC Products</h2>
@@ -656,14 +718,16 @@
 
 			</div>
 		</section>
-		<section>
+		<section id="classes">
 			<figcaption>
 				<div class="bg">
 					<div class="container">
 						<div class="row">
-							<div class="col-12 text-center"><h1>Classes of Certificates</h1> </div>
+							<div class="col-12 text-center">
+								<h1>Classes of Certificates</h1>
+							</div>
 							<!--           <h1 style="text-align: left;">Classes of Certificates</h1> -->
-							
+
 						</div>
 					</div>
 				</div>
@@ -823,7 +887,7 @@
 				</div>
 			</section>
 		</section>
-		<section>
+		<section id="esic">
 			<section class="new-banner">
 				<div class="wrap-new">
 					<h1>ESIC Registration for Your Company<span>All India Service | Same day service delivery</span>
@@ -1326,7 +1390,7 @@
 				</div>
 			</section>
 		</section>
-		<section>
+		<section id="gst">
 			<section class="new-banner">
 				<div class="wrap-new">
 					<h1>GST Registration in India<span>All India Service - 100% Online Process</span></h1>
@@ -1964,7 +2028,7 @@
 				</div>
 			</section>
 		</section>
-		<section>
+		<section id="import">
 			<section class="new-banner">
 				<div class="wrap-new">
 					<h1>Import Export Code Registration<span>All DGFT Servies at one place, All over India</span></h1>
@@ -2551,7 +2615,7 @@
 				</div>
 			</section>
 		</section>
-		<section>
+		<section id="msme">
 			<section class="new-banner">
 				<div class="wrap-new">
 					<h1>MSME Registration or Udyog Aadhar<span>By ministry of micro, small &amp; medium
@@ -2946,48 +3010,66 @@
 				<div class="wrap-new">
 					<h2>Meaning of Micro, Small and Medium Enterprises <span>Under MSME Act</span></h2>
 					<div class="row">
-						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"><article class="left">
-							<img src="assets/img/shops-and-establishment.jpg" alt="Micro Enterprise"
-								title="Micro Enterprise">
-							<h3>Micro Enterprise</h3>
-							<p>An enterprise which is engaged in manufacturing can be classified as a Micro Enterprises
-								in case the total investment in its plant and machinery is less than Rs. 25 Lakhs.
-								However in case the enterprise deals in service sector then the said investment must be
-								less than 10 Lakh, during the financial year.</p>
-						</article></div>
-						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"><article class="right">
-							<img src="assets/img/small-enterprise.jpg" alt="Small Enterprise" title="Small Enterprise">
-							<h3>Small Enterprise</h3>
-							<p>An enterprise which is engaged in manufacturing can be classified as a Small Enterprises
-								in case the total investment in its plant and machinery is more than Rs. 25 Lakhs but
-								does not exceed Rs. 5 Crores. However in case the enterprise deals in service sector
-								then the said investment must be more than 10 Lakh but must not exceed Rs. 2 Crores.</p>
-						</article></div>
-						
-						
+						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+							<article class="left">
+								<img src="assets/img/shops-and-establishment.jpg" alt="Micro Enterprise"
+									title="Micro Enterprise">
+								<h3>Micro Enterprise</h3>
+								<p>An enterprise which is engaged in manufacturing can be classified as a Micro
+									Enterprises
+									in case the total investment in its plant and machinery is less than Rs. 25 Lakhs.
+									However in case the enterprise deals in service sector then the said investment must
+									be
+									less than 10 Lakh, during the financial year.</p>
+							</article>
+						</div>
+						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+							<article class="right">
+								<img src="assets/img/small-enterprise.jpg" alt="Small Enterprise"
+									title="Small Enterprise">
+								<h3>Small Enterprise</h3>
+								<p>An enterprise which is engaged in manufacturing can be classified as a Small
+									Enterprises
+									in case the total investment in its plant and machinery is more than Rs. 25 Lakhs
+									but
+									does not exceed Rs. 5 Crores. However in case the enterprise deals in service sector
+									then the said investment must be more than 10 Lakh but must not exceed Rs. 2 Crores.
+								</p>
+							</article>
+						</div>
+
+
 					</div>
 					<div class="row">
-						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 "><article class="left">
-							<img src="assets/img/medium-enterprise.jpg" alt="Medium Enterprise"
-								title="Medium Enterprise">
-							<h3>Medium Enterprise</h3>
-							<p>An enterprise which is engaged in manufacturing can be classified as a Medium Enterprises
-								in case the total investment in its plant and machinery is more than Rs. 5 Crores but
-								does not exceed Rs. 10 Crores. However in case the enterprise deals in service sector
-								then the said investment must be more than 2 Crores but must not exceed Rs. 5 Crores.
-							</p>
-						</article></div>
-						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"><article class="right">
-							<img src="assets/img/benefits-of-msme-in-brief.jpg" alt="Benefits of MSME in Brief"
-								title="Benefits of MSME in Brief">
-							<h3>Benefits of MSME in Brief</h3>
-							<p>An MSME is entitled to many benefits such as a reduction in the fee for the filing of
-								trademark, copyright, patent, and design applications. Further, all government
-								department has to necessarily source their supplies from a MSME. The benefits of the
-								MSME Registration is provided in the following section of this page.</p>
-						</article></div>
-						
-						
+						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
+							<article class="left">
+								<img src="assets/img/medium-enterprise.jpg" alt="Medium Enterprise"
+									title="Medium Enterprise">
+								<h3>Medium Enterprise</h3>
+								<p>An enterprise which is engaged in manufacturing can be classified as a Medium
+									Enterprises
+									in case the total investment in its plant and machinery is more than Rs. 5 Crores
+									but
+									does not exceed Rs. 10 Crores. However in case the enterprise deals in service
+									sector
+									then the said investment must be more than 2 Crores but must not exceed Rs. 5
+									Crores.
+								</p>
+							</article>
+						</div>
+						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+							<article class="right">
+								<img src="assets/img/benefits-of-msme-in-brief.jpg" alt="Benefits of MSME in Brief"
+									title="Benefits of MSME in Brief">
+								<h3>Benefits of MSME in Brief</h3>
+								<p>An MSME is entitled to many benefits such as a reduction in the fee for the filing of
+									trademark, copyright, patent, and design applications. Further, all government
+									department has to necessarily source their supplies from a MSME. The benefits of the
+									MSME Registration is provided in the following section of this page.</p>
+							</article>
+						</div>
+
+
 					</div>
 				</div>
 			</section>
@@ -3185,7 +3267,7 @@
 				</div>
 			</section>
 		</section>
-		<section>
+		<section id="pf">
 			<section class="new-banner">
 				<div class="wrap-new">
 					<h1>PF Registration of Employer<span>All India Service | Same day service delivery</span></h1>
@@ -3194,7 +3276,8 @@
 								src="assets/img/whatsapp.svg" alt="Chat on WhatsApp" width="35px"> <span>Chat on
 								WhatsApp</span></a>
 						<a href="https://m.me/setindiabiz" class="sad1" target="_blank"><img
-								src="assets/img/facebook-messenger`.png" width="30px;"> <span>Chat on Facebook</span></a>
+								src="assets/img/facebook-messenger`.png" width="30px;"> <span>Chat on
+								Facebook</span></a>
 					</div>
 				</div>
 				<!---->
@@ -3313,7 +3396,8 @@
 										</div>
 										<div class="owl-item cloned" style="width: 179.8px; margin-right: 15px;">
 											<div class="item fgfgfg">
-												<img src="assets/img/client-slide/ksr-frontline.png" alt="ksr frontline">
+												<img src="assets/img/client-slide/ksr-frontline.png"
+													alt="ksr frontline">
 											</div>
 										</div>
 										<div class="owl-item cloned" style="width: 179.8px; margin-right: 15px;">
@@ -3353,7 +3437,8 @@
 										</div>
 										<div class="owl-item" style="width: 179.8px; margin-right: 15px;">
 											<div class="item fgfgfg">
-												<img src="assets/img/client-slide/6trux-trust-setindiabiz.png" alt="trux">
+												<img src="assets/img/client-slide/6trux-trust-setindiabiz.png"
+													alt="trux">
 											</div>
 										</div>
 										<div class="owl-item" style="width: 179.8px; margin-right: 15px;">
@@ -3420,7 +3505,8 @@
 										</div>
 										<div class="owl-item" style="width: 179.8px; margin-right: 15px;">
 											<div class="item fgfgfg">
-												<img src="assets/img/client-slide/ksr-frontline.png" alt="ksr frontline">
+												<img src="assets/img/client-slide/ksr-frontline.png"
+													alt="ksr frontline">
 											</div>
 										</div>
 										<div class="owl-item" style="width: 179.8px; margin-right: 15px;">
@@ -3460,7 +3546,8 @@
 										</div>
 										<div class="owl-item cloned" style="width: 179.8px; margin-right: 15px;">
 											<div class="item fgfgfg">
-												<img src="assets/img/client-slide/6trux-trust-setindiabiz.png" alt="trux">
+												<img src="assets/img/client-slide/6trux-trust-setindiabiz.png"
+													alt="trux">
 											</div>
 										</div>
 										<div class="owl-item cloned" style="width: 179.8px; margin-right: 15px;">
@@ -3862,7 +3949,7 @@
 											<li title="Admin Charges for EDLI = Nil">Admin Charges for EDLI = Nil</li>
 											<li title="updated as on 01-04-2017">updated as on 01-04-2017</li>
 										</ol>
-									</font>
+									
 								</div>
 							</div>
 							<div class="accordionItem close1" itemscope="" itemprop="mainEntity"
@@ -3903,7 +3990,7 @@
 											excluded shall form part of the Basic Wages under section 2(b) shall not be
 											excluded. In other words, allowances which can not be attributed clearly to
 											a specific purpose shall be part and parcel of the Basic Wages.</p>
-									</font>
+									
 								</div>
 							</div>
 						</div>
@@ -3913,7 +4000,8 @@
 							<div class="social-c1">
 								<h4>It is easy to seek the answer to your queries, and We are close to you</h4>
 								<a href="https://api.whatsapp.com/send?phone=919899600605" class="wapp"
-									target="_blank"><img src="assets/img/whats-app.png" alt="Chat on WhatsApp"> <span>Chat
+									target="_blank"><img src="assets/img/whats-app.png" alt="Chat on WhatsApp">
+									<span>Chat
 										on WhatsApp</span></a>
 								<a href="https://m.me/setindiabiz" class="fbmsg" target="_blank"><img
 										src="assets/img/facebook-messenger`.jpg" width="16px;"> Chat on Facebook </a>
